@@ -1,5 +1,3 @@
-
-
 // RTC
 
 RtcDateTime now;
