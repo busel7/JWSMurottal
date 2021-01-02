@@ -118,56 +118,56 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length
         delay(100);
         currentTrack = 0;
       } else if (payload[1] == '2') {
-        mp3.playFolderLoop(2);
+        mp3.loopFolder(2);
         delay(100);
         currentTrack = 0;
       } else if (payload[1] == '3') {
-        mp3.playFolderLoop(3);
+        mp3.loopFolder(3);
         delay(100);
         currentTrack = 0;
       } else if (payload[1] == '4') {
-        mp3.playFolderLoop(4);
+        mp3.loopFolder(4);
         delay(100);
         currentTrack = 0;
       } else if (payload[1] == '5') {
-        mp3.playFolderLoop(5);
+        mp3.loopFolder(5);
         delay(100);
         currentTrack = 0;
       } else if (payload[1] == '6') {
-        mp3.playFolderLoop(6);
+        mp3.loopFolder(6);
         delay(100);
         currentTrack = 0;
       } else if (payload[1] == '7') {
-        mp3.playFolderLoop(7);
+        mp3.loopFolder(7);
         delay(100);
         currentTrack = 0;
       } else if (payload[1] == '8') {
-        mp3.playFolderLoop(8);
+        mp3.loopFolder(8);
         delay(100);
         currentTrack = 0;
       } else if (payload[1] == '9') {
-        mp3.playFolderLoop(9);
+        mp3.loopFolder(9);
         delay(100);
         currentTrack = 0;
       } else if (payload[1] == 'l') {
         if (payload[2] == '1') {
-          mp3.playFolderLoop(10);
+          mp3.loopFolder(10);
           delay(100);
           currentTrack = 0;
         } else if (payload[2] == '2') {
-          mp3.playFolderLoop(11);
+          mp3.loopFolder(11);
           delay(100);
           currentTrack = 0;
         } else if (payload[2] == '3') {
-          mp3.playFolderLoop(12);
+          mp3.loopFolder(12);
           delay(100);
           currentTrack = 0;
         } else if (payload[2] == '4') {
-          mp3.playFolderLoop(13);
+          mp3.loopFolder(13);
           delay(100);
           currentTrack = 0;
         } else if (payload[2] == '5') {
-          mp3.playFolderLoop(14);
+          mp3.loopFolder(14);
           delay(100);
           currentTrack = 0;
         }
@@ -280,12 +280,6 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t * payload, size_t length
       tmputama = 3;
     }
 
-    if (strcmp("dyoutubeinfo", (const char *)payload) == 0) {
-      Disp.clear();
-      tmputama = 4;
-    }
-
-    
     
     //for(int i = 0; i < length; i++)
     //  Serial.print((char) payload[i]);
