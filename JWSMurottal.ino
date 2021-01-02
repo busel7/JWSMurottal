@@ -29,7 +29,6 @@ RtcDS3231<TwoWire> Rtc(Wire);
 #include "WebServer.h"
 #include "RTC.h"
 #include "JWS.h"
-#include "YoutubeInfo.h"
 
 unsigned long websocketCount = 0, wait = 0;
 
@@ -69,8 +68,8 @@ void setup() {
 
   // Beri tanda komentar jika tidak menggunakan DFPlayer
   // jika tidak layar tidak akan tampil.
-  //mulaiMP3();
-  //mp3.setVolume(configdf.volume);
+  mulaiMP3();
+  mp3.setVolume(configdf.volume);
   
   //DMD
   Disp_init();
@@ -112,11 +111,6 @@ void loop() {
     case 3 :
       TestLED();
       break;
-
-    case 4 :      
-      TampilYoutubeData();
-      break;
-    
   }  
 
   //webSocket.broadcastTXT(jsonjws);
@@ -158,17 +152,8 @@ void tampiljws() {
       break;
 
     case 5 :
-      if (WiFi.status() == WL_CONNECTED) {
-        digitalWrite(pin_led, HIGH);
-        TampilYoutubeData();
-        intro1p = 0;
-        AlarmSholat();
-      } else {
-        digitalWrite(pin_led, LOW);
-        intro1p = 0;
-        tmpjws = 0;
-      }
-      
+      intro1p = 0;
+      tmpjws = 0;      
       break;
     
   }
