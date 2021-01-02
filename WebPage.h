@@ -190,8 +190,7 @@ p.info {
   <br/>
   <div>
     <a href="#" class="tombol" id="modejam" onclick="sendModeJam()">JWS</a>
-    <a href="#" class="tombol" id="modemp3" onclick="sendModeMP3()">Murottal</a>
-    <a href="#" class="tombol" id="modeyoutubeinfo" onclick="ModeYoutubeInfo()">Youtube Info</a>
+    <a href="#" class="tombol" id="modemp3" onclick="sendModeMP3()">Murottal</a>    
   </div>
 
   <hr/>
@@ -213,11 +212,6 @@ p.info {
       <option value="pl4">Juz Amma - Al Hudhaifi</option>
       <option value="pl5">Lain-lain</option>
     </select>
-  </div>
-  <br/>
-  <div>
-    <span id="foldermp3"></span>
-    <span id="trackmp3"></span>    
   </div>
   <br/>
   <h3>Equalizer</h3>
@@ -321,10 +315,6 @@ p.info {
       <input type="password" id="password" onchange="setWifi()"/>
     </div>
     <div>
-      <label for = "youtubeurl">Youtube URL</label>
-      <textarea id="youtubeurl" placeholder="youtubeurl" onchange="setWifi()"></textarea>
-    </div>
-    <div>
       <button onClick="resetNodeMCU()"> Terapkan dan Restart </button>
     </div>
   </form>
@@ -394,6 +384,7 @@ p.info {
   </div>
 
   <hr/>
+  <p>JWS Murottal V2.0.0 - 2021</p>
   <p class="footer"><a href="http://www.elektronmart.com" target="_blank">ElektronMart.Com</a> | <a href="https://www.grobak.net" target="_blank">Grobak.Net</a></p>
 
 </center>
@@ -506,10 +497,6 @@ function handleServerResponse(){
    xmldoc = xmlResponse.getElementsByTagName('rWifissid');
    message = xmldoc[0].firstChild.nodeValue;
    document.getElementById('wifissid').value=message;
-
-   xmldoc = xmlResponse.getElementsByTagName('rYoutubeurl');
-   message = xmldoc[0].firstChild.nodeValue;
-   document.getElementById('youtubeurl').value=message;
 
    xmldoc = xmlResponse.getElementsByTagName('rTanbih');
    message = xmldoc[0].firstChild.nodeValue;
@@ -691,8 +678,7 @@ function setWifi() {
   var wifipassword = document.getElementById("wifipassword").value;
   var ssid = document.getElementById("ssid").value;
   var password = document.getElementById("password").value;
-  var youtubeurl = document.getElementById("youtubeurl").value
-  var datawifi = {wifissid:wifissid, wifipassword:wifipassword, ssid:ssid, password:password, youtubeurl:youtubeurl};
+  var datawifi = {wifissid:wifissid, wifipassword:wifipassword, ssid:ssid, password:password};
 
   Socket.send("w" + JSON.stringify(datawifi));
   
@@ -707,12 +693,6 @@ function resetNodeMCU() {
 function sendTesLED() {
   
   Socket.send("dtesled");
-  
-}
-
-function ModeYoutubeInfo() {
-  
-  Socket.send("dyoutubeinfo");
   
 }
 
