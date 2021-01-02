@@ -1,6 +1,3 @@
-
-
-
 // BUZZER
 const int buzzer = 3; // Pin GPIO Buzzer - RX
 
