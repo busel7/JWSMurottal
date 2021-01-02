@@ -35,7 +35,6 @@ struct ConfigWifi {
   char wifipassword[64];
   char ssid[64];
   char password[64];
-  char youtubeurl[254];
 };
 
 struct ConfigDisp {
@@ -66,24 +65,6 @@ ConfigInfo configinfo;
 
 const char *fileconfigwifi = "/configwifi.json";
 ConfigWifi configwifi;
-
-
-
-// Youtube
-
-//Link to read data from https://jsonplaceholder.typicode.com/comments?postId=7
-//Web/Server address to read/write from 
-const char *host = "www.googleapis.com";
-const int httpsPort = 443;  //HTTPS= 443 and HTTP = 80
-
-//SHA1 finger print of certificate use web browser to view and copy
-const char fingerprint[] PROGMEM = "31 2E AB 22 32 AC 53 DE 53 27 A8 92 85 6F F5 BC 12 D9 C4 8C";
-String datayoutube;
-long hitungsubscriber;
-long hitungview;
-char subs[10];
-char view[10];
-boolean getdata = true;
 
 
 
@@ -154,9 +135,6 @@ void LoadDataAwal() {
     strlcpy(configwifi.password, "1000masjid", sizeof(configwifi.password));
   }
 
-  if (strlen(configwifi.youtubeurl) == 0) {
-    strlcpy(configwifi.youtubeurl, "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCEDJLuOw8cld2rvy8Sic2xA&key=AIzaSyD7l-fcqNna9NRhvgyCYmx0hmHbMLh6y7c", sizeof(configwifi.youtubeurl));
-  }
 
   if (configdisp.kecerahan == 0) {
     configdisp.kecerahan = 100;    
@@ -482,7 +460,6 @@ void loadWifiConfig(const char *fileconfigwifi, ConfigWifi &configwifi) {
   strlcpy(configwifi.wifipassword, doc["wifipassword"] | "12345", sizeof(configwifi.wifipassword));
   strlcpy(configwifi.ssid, doc["ssid"] | "grobak.net", sizeof(configwifi.wifissid));
   strlcpy(configwifi.password, doc["password"] | "12345", sizeof(configwifi.wifipassword));
-  strlcpy(configwifi.youtubeurl, doc["youtubeurl"] | "https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCEDJLuOw8cld2rvy8Sic2xA&key=AIzaSyBwMHRXovoL1eH4LP9kQSoO7ZOeHRNpGlg", sizeof(configwifi.youtubeurl));
 
   configFileWifi.close();
 
@@ -705,13 +682,7 @@ void buildXML(){
     XML+="</rSsid>";
     XML+="<rPassword>";
     XML+= configwifi.password;
-    XML+="</rPassword>";
-    
-    XML+="<rYoutubeurl>";
-    XML+="<![CDATA[";
-    XML+=configwifi.youtubeurl;
-    XML+="]]>";
-    XML+="</rYoutubeurl>";
+    XML+="</rPassword>";    
     
     XML+="<rIqmhs>";
     XML+= configjws.iqmhs;
