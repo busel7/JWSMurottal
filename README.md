@@ -11,8 +11,7 @@ alt="JWSP10 NodeMCU ESP8266" width="240" height="180" border="10" /></a>
 - HJS589 https://github.com/busel7/Arduino/tree/master/NodeMCU/JadwalSholat-P10-2Panel/libraries/HJS589
 - Ardunio Prayer Times https://github.com/asmaklad/Arduino-Prayer-Times
 - Arduino JSON https://github.com/bblanchon/ArduinoJson
-- Arduino WebSockets https://www.arduino.cc/reference/en/libraries/websockets/
-- Arduino Websockets https://github.com/gilmaimon/ArduinoWebsockets
+- Arduino Websockets https://github.com/Links2004/arduinoWebSockets
 - ESPSoftwareSerial https://github.com/plerup/espsoftwareserial/
 - Rtc https://github.com/Makuna/Rtc/wiki
 - DFMiniMp3 https://github.com/Makuna/DFMiniMp3
