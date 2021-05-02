@@ -1,4 +1,22 @@
 
+// forward declare the notify class, just the name
+//
+class Mp3Notify; 
+
+// define a handy type using serial and our notify class
+//
+typedef DFMiniMp3<HardwareSerial, Mp3Notify> DfMp3; 
+
+// instance a DfMp3 object, 
+//
+DfMp3 mp3(Serial);
+
+// Some arduino boards only have one hardware serial port, so a software serial port is needed instead.
+// comment out the above definitions and use these
+//SoftwareSerial secondarySerial(10, 11); // RX, TX
+//typedef DFMiniMp3<SoftwareSerial, Mp3Notify> DfMp3;
+// DfMp3 dfmp3(secondarySerial);
+
 // implement a notification class,
 // its member methods will get called 
 //
@@ -21,41 +39,32 @@ public:
     }
     Serial.println(action);
   }
-  static void OnError(uint16_t errorCode)
+  static void OnError(DfMp3& mp3, uint16_t errorCode)
   {
     // see DfMp3_Error for code meaning
     Serial.println();
     Serial.print("Com Error ");
     Serial.println(errorCode);
   }
-  static void OnPlayFinished(DfMp3_PlaySources source, uint16_t track)
+  static void OnPlayFinished(DfMp3& mp3, DfMp3_PlaySources source, uint16_t track)
   {
     Serial.print("Play finished for #");
     Serial.println(track);  
   }
-  static void OnPlaySourceOnline(DfMp3_PlaySources source)
+  static void OnPlaySourceOnline(DfMp3& mp3, DfMp3_PlaySources source)
   {
     PrintlnSourceAction(source, "online");
   }
-  static void OnPlaySourceInserted(DfMp3_PlaySources source)
+  static void OnPlaySourceInserted(DfMp3& mp3, DfMp3_PlaySources source)
   {
     PrintlnSourceAction(source, "inserted");
   }
-  static void OnPlaySourceRemoved(DfMp3_PlaySources source)
+  static void OnPlaySourceRemoved(DfMp3& mp3, DfMp3_PlaySources source)
   {
     PrintlnSourceAction(source, "removed");
   }
 };
 
-// instance a DFMiniMp3 object, 
-// defined with the above notification class and the hardware serial class
-//
-DFMiniMp3<HardwareSerial, Mp3Notify> mp3(Serial);
-
-// Some arduino boards only have one hardware serial port, so a software serial port is needed instead.
-// comment out the above definition and uncomment these lines
-//SoftwareSerial secondarySerial(10, 11); // RX, TX
-//DFMiniMp3<SoftwareSerial, Mp3Notify> mp3(secondarySerial);
 
 uint16_t volume;
 uint16_t currentTrack;
