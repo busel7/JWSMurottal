@@ -13,7 +13,7 @@ alt="JWSP10 NodeMCU ESP8266" width="240" height="180" border="10" /></a>
 - Arduino JSON https://github.com/bblanchon/ArduinoJson
 - Arduino Websockets https://github.com/Links2004/arduinoWebSockets
 - ESPSoftwareSerial https://github.com/plerup/espsoftwareserial/
-- Rtc https://github.com/Makuna/Rtc/wiki
+- Rtc https://github.com/Makuna/Rtc
 - DFMiniMp3 https://github.com/Makuna/DFMiniMp3
 
 Deskripsi lainnya menyusul
