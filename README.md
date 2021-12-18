@@ -22,20 +22,20 @@ Deskripsi lainnya menyusul
 
 Link Pembelian JWS KIT
 ---------------------------------------
-o https://www.tokopedia.com/elektronmartcom/jws-kit-controller-led-p10-hub12-mp3-murottal-jadwal-sholat-digital-jws-kit
-o https://www.bukalapak.com/p/elektronik/media-player-set-top-box/36buedq-jual-jws-kit-controller-led-p10-hub12-mp3-murottal-jadwal-sholat-digital
-o https://shopee.co.id/JWS-KIT-Controller-LED-P10-HUB12-MP3-Murottal-Jadwal-Sholat-Digital-i.139057740.3232523760
+- https://www.tokopedia.com/elektronmartcom/jws-kit-controller-led-p10-hub12-mp3-murottal-jadwal-sholat-digital-jws-kit
+- https://www.bukalapak.com/p/elektronik/media-player-set-top-box/36buedq-jual-jws-kit-controller-led-p10-hub12-mp3-murottal-jadwal-sholat-digital
+- https://shopee.co.id/JWS-KIT-Controller-LED-P10-HUB12-MP3-Murottal-Jadwal-Sholat-Digital-i.139057740.3232523760
 
 
 Link Pembelian Controller PCB Lengkap
 ---------------------------------------------------------------
-o https://tokopedia.com/elektronmartcom/controller-jws-murottal-quad-multi-panel-wifi-mp3-jam-jadwal-sholat
-o https://www.bukalapak.com/p/elektronik/elektronik-lainnya/315l4pa-jual-controller-jws-murottal-quad-multi-panel-wifi-mp3-jam-jadwal-sholat-led-masjid
-o https://shopee.co.id/Controller-JWS-Murottal-Quad-Multi-Panel-Wifi-MP3-Jam-Jadwal-Sholat-i.139057740.3147793428
+- https://tokopedia.com/elektronmartcom/controller-jws-murottal-quad-multi-panel-wifi-mp3-jam-jadwal-sholat
+- https://www.bukalapak.com/p/elektronik/elektronik-lainnya/315l4pa-jual-controller-jws-murottal-quad-multi-panel-wifi-mp3-jam-jadwal-sholat-led-masjid
+- https://shopee.co.id/Controller-JWS-Murottal-Quad-Multi-Panel-Wifi-MP3-Jam-Jadwal-Sholat-i.139057740.3147793428
 
 
 Link Pembelian PCB
 --------------------------------
-o https://www.tokopedia.com/elektronmartcom/pcb-jws-nodemcu-board-2-0-elektronmart-led-p10-arduino
-o https://www.bukalapak.com/p/elektronik/komponen-elektronik/2aiovn2-jual-pcb-jws-nodemcu-board-2-0-elektronmart-led-p10-arduino
-o https://shopee.co.id/PCB-Controller-JWS-NodeMCU-Board-2.0-ElektronMart-LED-P10-Arduino-i.139057740.7134254234
+- https://www.tokopedia.com/elektronmartcom/pcb-jws-nodemcu-board-2-0-elektronmart-led-p10-arduino
+- https://www.bukalapak.com/p/elektronik/komponen-elektronik/2aiovn2-jual-pcb-jws-nodemcu-board-2-0-elektronmart-led-p10-arduino
+- https://shopee.co.id/PCB-Controller-JWS-NodeMCU-Board-2.0-ElektronMart-LED-P10-Arduino-i.139057740.7134254234
